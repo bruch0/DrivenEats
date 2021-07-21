@@ -1,0 +1,30 @@
+* {
+    box-sizing: border-box;
+}
+
+.topbar {
+    height: 92px;
+    width: 100%;
+    background-color: #CF2B2B;
+    color: #FFFFFF;
+    padding: 8px 0 0 21px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    box-shadow: 0px 5px 5px gray;
+}
+
+.title {
+    font-family: 'Righteous';
+    font-size: 44px;
+    line-height: 55px;
+    letter-spacing: -0.012em;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    line-height: 21px;
+}
+
