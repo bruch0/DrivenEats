@@ -37,6 +37,7 @@ p {
     margin-top: 123px;
     padding-left: 19px;
     font-family: 'Roboto', sans-serif;;
+    margin-bottom: 100px;
 }
 
 .dishes > div {
@@ -99,4 +100,30 @@ p {
 
 .drink .dish-container > div {
     margin-top: 11px;
+}
+
+.order {
+    width: 100%;
+    height: 92px;
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.order button {
+    background-color: #CBCBCB;
+    color: #FFFFFF;
+    width: 80%;
+    height: 61px;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    letter-spacing: 0.018em;
+    border-radius: 50px;
+    border: 0px;
 }
