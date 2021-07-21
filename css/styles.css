@@ -63,13 +63,12 @@ p {
 }
 
 .dish-container div {
-    margin-top: 5px;
+    margin-top: 9px;
 }
 
 .dish {
     background-color: #FFFFFF;
     min-width: 172px;
-    height: 216px;
     margin-right: 16px;
     border-radius: 9px;
 }
@@ -77,7 +76,7 @@ p {
 .dish img {
     width: 144px;
     height: 87px;
-    margin: 2px auto;
+    margin: 5px auto 2px auto;
     border-radius: 4px;
 }
 
@@ -89,7 +88,6 @@ p {
 
 .description {
     color: #A6A6A6;
-    font-weight: 300;
     font-size: 15px;
     line-height: 18px;
 }
@@ -97,4 +95,8 @@ p {
 .price {
     font-size: 16px;
     line-height: 19px;  
+}
+
+.drink .dish-container > div {
+    margin-top: 11px;
 }
