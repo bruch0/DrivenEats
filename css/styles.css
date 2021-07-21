@@ -12,6 +12,12 @@ p {
     line-height: 21px;
 }
 
+ion-icon {
+    color: #32B72F;
+    font-size: 20px;
+    display: none;
+}
+
 .topbar {
     height: 92px;
     width: 100%;
@@ -34,14 +40,21 @@ p {
 }
 
 .dishes {
-    margin-top: 123px;
+    margin: 123px 0px 100px 0px;
     padding-left: 19px;
     font-family: 'Roboto', sans-serif;;
-    margin-bottom: 100px;
 }
 
 .dishes > div {
     margin-bottom: 27px;
+}
+
+.dishes button {
+    border: 5px solid transparent;
+    margin: 0px 16px 0px 0px;
+    padding: 0px;
+    width: 144px;
+    text-align: start;
 }
 
 .food-title {
@@ -60,7 +73,7 @@ p {
 
 .dish-container {
     width: 144px;
-    margin: 10px auto;
+    margin: 0px auto;
 }
 
 .dish-container div {
@@ -94,8 +107,11 @@ p {
 }
 
 .price {
+    display: flex;
     font-size: 16px;
     line-height: 19px;  
+    justify-content: space-between;
+    align-items: center;
 }
 
 .drink .dish-container > div {

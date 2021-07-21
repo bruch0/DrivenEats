@@ -25,7 +25,7 @@
                 Primeiro, o seu prato
             </div>
             <div class="options">
-                <div class="dish">
+                <button type="button" class="dish" id="main-1" onclick="selectMainDish1()">
                     <div class="dish-container">
                         <img src="assets/main-dish-1.jpeg">
                         <div class="dish-title">
@@ -36,11 +36,12 @@
                         </div>
                         <div class="price">
                             R$ 20,00
+                            <ion-icon name="checkmark-circle"></ion-icon>
                         </div>
                     </div>
-                </div>
+                </button>
 
-                <div class="dish">
+                <button type="button" class="dish" id="main-2" onclick="selectMainDish2()">
                     <div class="dish-container">
                         <img src="assets/main-dish-2.jpeg">
                         <div class="dish-title">
@@ -53,9 +54,9 @@
                             R$ 25,00
                         </div>
                     </div>
-                </div>
+                </button>
 
-                <div class="dish">
+                <button type="button" class="dish">
                     <div class="dish-container">
                         <img src="assets/main-dish-3.jpeg">
                         <div class="dish-title">
@@ -68,9 +69,9 @@
                             R$ 16,00
                         </div>
                     </div>
-                </div>
+                </button>
 
-                <div class="dish">
+                <button type="button" class="dish">
                     <div class="dish-container">
                         <img src="assets/main-dish-4.jpeg">
                         <div class="dish-title">
@@ -83,7 +84,7 @@
                             R$ 21,00
                         </div>
                     </div>
-                </div>
+                </button>
             </div>
         </div>
 
@@ -92,7 +93,7 @@
                 Agora, sua bebida
             </div>
             <div class="options">
-                <div class="dish">
+                <button type="button" class="dish">
                     <div class="dish-container">
                         <img src="assets/drink-1.png">
                         <div class="dish-title">
@@ -105,9 +106,9 @@
                             R$ 6,00
                         </div>
                     </div>
-                </div>
+                </button>
 
-                <div class="dish">
+                <button type="button" class="dish">
                     <div class="dish-container">
                         <img src="assets/drink-2.png">
                         <div class="dish-title">
@@ -120,9 +121,9 @@
                             R$ 12,00
                         </div>
                     </div>
-                </div>
+                </button>
 
-                <div class="dish">
+                <button type="button" class="dish">
                     <div class="dish-container">
                         <img src="assets/drink-3.png">
                         <div class="dish-title">
@@ -135,9 +136,9 @@
                             R$ 5,00
                         </div>
                     </div>
-                </div>
+                </button>
 
-                <div class="dish">
+                <button type="button" class="dish">
                     <div class="dish-container">
                         <img src="assets/drink-4.png">
                         <div class="dish-title">
@@ -150,7 +151,7 @@
                             R$ 4,00
                         </div>
                     </div>
-                </div>
+                </button>
             </div>
         </div>
 
@@ -159,7 +160,7 @@
                 Por fim, sua sobremesa
             </div>
             <div class="options">
-                <div class="dish">
+                <button type="button" class="dish">
                     <div class="dish-container">
                         <img src="assets/desert-1.png">
                         <div class="dish-title">
@@ -172,9 +173,9 @@
                             R$ 4,00
                         </div>
                     </div>
-                </div>
+                </button>
 
-                <div class="dish">
+                <button type="button" class="dish">
                     <div class="dish-container">
                         <img src="assets/desert-2.png">
                         <div class="dish-title">
@@ -187,9 +188,9 @@
                             R$ 5,00
                         </div>
                     </div>
-                </div>
+                </button>
 
-                <div class="dish">
+                <button type="button" class="dish">
                     <div class="dish-container">
                         <img src="assets/desert-3.png">
                         <div class="dish-title">
@@ -202,9 +203,9 @@
                             R$ 4,50
                         </div>
                     </div>
-                </div>
+                </button>
 
-                <div class="dish">
+                <button type="button" class="dish">
                     <div class="dish-container">
                         <img src="assets/desert-4.jpeg">
                         <div class="dish-title">
@@ -217,13 +218,16 @@
                             R$ 2,50
                         </div>
                     </div>
-                </div>
+                </button>
             </div>
         </div>
     </div>
 
     <div class="order">
-        <button>Selecione os 3 itens<br>para fechar o pedido</button>
+        <button type="button">Selecione os 3 itens<br>para fechar o pedido</button>
     </div>
+
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
