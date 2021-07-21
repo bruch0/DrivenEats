@@ -36,6 +36,7 @@ p {
 .dishes {
     margin-top: 123px;
     padding-left: 19px;
+    font-family: 'Roboto', sans-serif;;
 }
 
 .dishes > div {
@@ -56,9 +57,44 @@ p {
     overflow-x: scroll;
 }
 
+.dish-container {
+    width: 144px;
+    margin: 10px auto;
+}
+
+.dish-container div {
+    margin-top: 5px;
+}
+
 .dish {
     background-color: #FFFFFF;
     min-width: 172px;
     height: 216px;
     margin-right: 16px;
+    border-radius: 9px;
+}
+
+.dish img {
+    width: 144px;
+    height: 87px;
+    margin: 2px auto;
+    border-radius: 4px;
+}
+
+.dish-title {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+.description {
+    color: #A6A6A6;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 18px;
+}
+
+.price {
+    font-size: 16px;
+    line-height: 19px;  
 }
