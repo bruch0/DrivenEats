@@ -24,10 +24,14 @@ function check() {
 // Select main dish function
 
 function selectMainDish1 () {
-    document.getElementById("main-1").style.border = "5px solid #32B72F";
-    document.getElementById("main-2").style.border = "5px solid transparent";
-    document.getElementById("main-3").style.border = "5px solid transparent";
-    document.getElementById("main-4").style.border = "5px solid transparent";
+    document.getElementById("main-1").style.borderColor = "#32B72F";
+    document.getElementById("main-2").style.borderColor = "transparent";
+    document.getElementById("main-3").style.borderColor = "transparent";
+    document.getElementById("main-4").style.borderColor = "transparent";
+    document.getElementById("check-main-1").style.display = "initial";
+    document.getElementById("check-main-2").style.display = "none";
+    document.getElementById("check-main-3").style.display = "none";
+    document.getElementById("check-main-4").style.display = "none";
     mainDish = document.getElementById("main-1-title").innerText;
     priceMainDish = document.getElementById("price-main-1").innerText;
     select1 = true;
@@ -35,10 +39,14 @@ function selectMainDish1 () {
 }
 
 function selectMainDish2 () {
-    document.getElementById("main-2").style.border = "5px solid #32B72F";
-    document.getElementById("main-1").style.border = "5px solid transparent";
-    document.getElementById("main-3").style.border = "5px solid transparent";
-    document.getElementById("main-4").style.border = "5px solid transparent";
+    document.getElementById("main-1").style.borderColor = "transparent";
+    document.getElementById("main-2").style.borderColor = "#32B72F";
+    document.getElementById("main-3").style.borderColor = "transparent";
+    document.getElementById("main-4").style.borderColor = "transparent";
+    document.getElementById("check-main-1").style.display = "none";
+    document.getElementById("check-main-2").style.display = "initial";
+    document.getElementById("check-main-3").style.display = "none";
+    document.getElementById("check-main-4").style.display = "none";
     mainDish = document.getElementById("main-2-title").innerText;
     priceMainDish = document.getElementById("price-main-2").innerText;
     select1 = true;
@@ -46,10 +54,14 @@ function selectMainDish2 () {
 }
 
 function selectMainDish3 () {
-    document.getElementById("main-3").style.border = "5px solid #32B72F";
-    document.getElementById("main-1").style.border = "5px solid transparent";
-    document.getElementById("main-2").style.border = "5px solid transparent";
-    document.getElementById("main-4").style.border = "5px solid transparent";
+    document.getElementById("main-1").style.borderColor = "transparent";
+    document.getElementById("main-2").style.borderColor = "transparent";
+    document.getElementById("main-3").style.borderColor = "#32B72F";
+    document.getElementById("main-4").style.borderColor = "transparent";
+    document.getElementById("check-main-1").style.display = "none";
+    document.getElementById("check-main-2").style.display = "none";
+    document.getElementById("check-main-3").style.display = "initial";
+    document.getElementById("check-main-4").style.display = "none";
     mainDish = document.getElementById("main-3-title").innerText;
     priceMainDish = document.getElementById("price-main-3").innerText;
     select1 = true;
@@ -57,10 +69,14 @@ function selectMainDish3 () {
 }
 
 function selectMainDish4 () {
-    document.getElementById("main-4").style.border = "5px solid #32B72F";
-    document.getElementById("main-1").style.border = "5px solid transparent";
-    document.getElementById("main-2").style.border = "5px solid transparent";
-    document.getElementById("main-3").style.border = "5px solid transparent";
+    document.getElementById("main-1").style.borderColor = "transparent";
+    document.getElementById("main-2").style.borderColor = "transparent";
+    document.getElementById("main-3").style.borderColor = "transparent";
+    document.getElementById("main-4").style.borderColor = "#32B72F";
+    document.getElementById("check-main-1").style.display = "none";
+    document.getElementById("check-main-2").style.display = "none";
+    document.getElementById("check-main-3").style.display = "none";
+    document.getElementById("check-main-4").style.display = "initial";
     mainDish = document.getElementById("main-4-title").innerText;
     priceMainDish = document.getElementById("price-main-4").innerText;
     select1 = true;
@@ -70,10 +86,14 @@ function selectMainDish4 () {
 // Select drink functions
 
 function selectDrink1 () {
-    document.getElementById("drink-1").style.border = "5px solid #32B72F";
-    document.getElementById("drink-2").style.border = "5px solid transparent";
-    document.getElementById("drink-3").style.border = "5px solid transparent";
-    document.getElementById("drink-4").style.border = "5px solid transparent";
+    document.getElementById("drink-1").style.borderColor = "#32B72F";
+    document.getElementById("drink-2").style.borderColor = "transparent";
+    document.getElementById("drink-3").style.borderColor = "transparent";
+    document.getElementById("drink-4").style.borderColor = "transparent";
+    document.getElementById("check-drink-1").style.display = "initial";
+    document.getElementById("check-drink-2").style.display = "none";
+    document.getElementById("check-drink-3").style.display = "none";
+    document.getElementById("check-drink-4").style.display = "none";
     drink = document.getElementById("drink-1-title").innerText;
     priceDrink = document.getElementById("price-drink-1").innerText;
     select2 = true;
@@ -81,10 +101,14 @@ function selectDrink1 () {
 }
 
 function selectDrink2 () {
-    document.getElementById("drink-2").style.border = "5px solid #32B72F";
-    document.getElementById("drink-1").style.border = "5px solid transparent";
-    document.getElementById("drink-3").style.border = "5px solid transparent";
-    document.getElementById("drink-4").style.border = "5px solid transparent";
+    document.getElementById("drink-1").style.borderColor = "transparent";
+    document.getElementById("drink-2").style.borderColor = "#32B72F";
+    document.getElementById("drink-3").style.borderColor = "transparent";
+    document.getElementById("drink-4").style.borderColor = "transparent";
+    document.getElementById("check-drink-1").style.display = "none";
+    document.getElementById("check-drink-2").style.display = "initial";
+    document.getElementById("check-drink-3").style.display = "none";
+    document.getElementById("check-drink-4").style.display = "none";
     drink = document.getElementById("drink-2-title").innerText;
     priceDrink = document.getElementById("price-drink-2").innerText;
     select2 = true;
@@ -92,10 +116,14 @@ function selectDrink2 () {
 }
 
 function selectDrink3 () {
-    document.getElementById("drink-3").style.border = "5px solid #32B72F";
-    document.getElementById("drink-1").style.border = "5px solid transparent";
-    document.getElementById("drink-2").style.border = "5px solid transparent";
-    document.getElementById("drink-4").style.border = "5px solid transparent";
+    document.getElementById("drink-1").style.borderColor = "transparent";
+    document.getElementById("drink-2").style.borderColor = "transparent";
+    document.getElementById("drink-3").style.borderColor = "#32B72F";
+    document.getElementById("drink-4").style.borderColor = "transparent";
+    document.getElementById("check-drink-1").style.display = "none";
+    document.getElementById("check-drink-2").style.display = "none";
+    document.getElementById("check-drink-3").style.display = "initial";
+    document.getElementById("check-drink-4").style.display = "none";
     drink = document.getElementById("drink-3-title").innerText;
     priceDrink = document.getElementById("price-drink-3").innerText;
     select2 = true;
@@ -103,10 +131,14 @@ function selectDrink3 () {
 }
 
 function selectDrink4 () {
-    document.getElementById("drink-4").style.border = "5px solid #32B72F";
-    document.getElementById("drink-1").style.border = "5px solid transparent";
-    document.getElementById("drink-2").style.border = "5px solid transparent";
-    document.getElementById("drink-3").style.border = "5px solid transparent";
+    document.getElementById("drink-1").style.borderColor = "transparent";
+    document.getElementById("drink-2").style.borderColor = "transparent";
+    document.getElementById("drink-3").style.borderColor = "transparent";
+    document.getElementById("drink-4").style.borderColor = "#32B72F";
+    document.getElementById("check-drink-1").style.display = "none";
+    document.getElementById("check-drink-2").style.display = "none";
+    document.getElementById("check-drink-3").style.display = "none";
+    document.getElementById("check-drink-4").style.display = "initial";
     drink = document.getElementById("drink-4-title").innerText;
     priceDrink = document.getElementById("price-drink-4").innerText;
     select2 = true;
@@ -116,10 +148,14 @@ function selectDrink4 () {
 // Select desert functions
 
 function selectDesert1 () {
-    document.getElementById("desert-1").style.border = "5px solid #32B72F";
-    document.getElementById("desert-2").style.border = "5px solid transparent";
-    document.getElementById("desert-3").style.border = "5px solid transparent";
-    document.getElementById("desert-4").style.border = "5px solid transparent";
+    document.getElementById("desert-1").style.borderColor = "#32B72F";
+    document.getElementById("desert-2").style.borderColor = "transparent";
+    document.getElementById("desert-3").style.borderColor = "transparent";
+    document.getElementById("desert-4").style.borderColor = "transparent";
+    document.getElementById("check-desert-1").style.display = "initial";
+    document.getElementById("check-desert-2").style.display = "none";
+    document.getElementById("check-desert-3").style.display = "none";
+    document.getElementById("check-desert-4").style.display = "none";
     desert = document.getElementById("desert-1-title").innerText;
     priceDesert = document.getElementById("price-desert-1").innerText;
     select3 = true;
@@ -127,10 +163,14 @@ function selectDesert1 () {
 }
 
 function selectDesert2 () {
-    document.getElementById("desert-2").style.border = "5px solid #32B72F";
-    document.getElementById("desert-1").style.border = "5px solid transparent";
-    document.getElementById("desert-3").style.border = "5px solid transparent";
-    document.getElementById("desert-4").style.border = "5px solid transparent";
+    document.getElementById("desert-1").style.borderColor = "transparent";
+    document.getElementById("desert-2").style.borderColor = "#32B72F";
+    document.getElementById("desert-3").style.borderColor = "transparent";
+    document.getElementById("desert-4").style.borderColor = "transparent";
+    document.getElementById("check-desert-1").style.display = "none";
+    document.getElementById("check-desert-2").style.display = "initial";
+    document.getElementById("check-desert-3").style.display = "none";
+    document.getElementById("check-desert-4").style.display = "none";
     desert = document.getElementById("desert-2-title").innerText;
     priceDesert = document.getElementById("price-desert-2").innerText;
     select3 = true;
@@ -138,10 +178,14 @@ function selectDesert2 () {
 }
 
 function selectDesert3 () {
-    document.getElementById("desert-3").style.border = "5px solid #32B72F";
-    document.getElementById("desert-1").style.border = "5px solid transparent";
-    document.getElementById("desert-2").style.border = "5px solid transparent";
-    document.getElementById("desert-4").style.border = "5px solid transparent";
+    document.getElementById("desert-1").style.borderColor = "transparent";
+    document.getElementById("desert-2").style.borderColor = "transparent";
+    document.getElementById("desert-3").style.borderColor = "#32B72F";
+    document.getElementById("desert-4").style.borderColor = "transparent";
+    document.getElementById("check-desert-1").style.display = "none";
+    document.getElementById("check-desert-2").style.display = "none";
+    document.getElementById("check-desert-3").style.display = "initial";
+    document.getElementById("check-desert-4").style.display = "none";
     desert = document.getElementById("desert-3-title").innerText;
     priceDesert = document.getElementById("price-desert-3").innerText;
     select3 = true;
@@ -149,10 +193,14 @@ function selectDesert3 () {
 }
 
 function selectDesert4 () {
-    document.getElementById("desert-4").style.border = "5px solid #32B72F";
-    document.getElementById("desert-1").style.border = "5px solid transparent";
-    document.getElementById("desert-2").style.border = "5px solid transparent";
-    document.getElementById("desert-3").style.border = "5px solid transparent";
+    document.getElementById("desert-1").style.borderColor = "transparent";
+    document.getElementById("desert-2").style.borderColor = "transparent";
+    document.getElementById("desert-3").style.borderColor = "transparent";
+    document.getElementById("desert-4").style.borderColor = "#32B72F";
+    document.getElementById("check-desert-1").style.display = "none";
+    document.getElementById("check-desert-2").style.display = "none";
+    document.getElementById("check-desert-3").style.display = "none";
+    document.getElementById("check-desert-4").style.display = "initial";
     desert = document.getElementById("desert-4-title").innerText;
     priceDesert = document.getElementById("price-desert-4").innerText;
     select3 = true;
