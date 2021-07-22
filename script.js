@@ -10,7 +10,8 @@ priceMainDish = 0
 priceDrink = 0
 priceDesert = 0
 total = 0
-
+userOrder = ''
+text = 'https://wa.me/5548984321748?text='
 
 
 function check() {
@@ -163,5 +164,25 @@ function selectDesert4 () {
 function order() {
     userName = prompt("Insira seu nome")
     address = prompt("Insira seu endereço")
+    total = parseInt(priceMainDish) + parseInt(priceDrink) + parseInt(priceDesert)
+    document.getElementById("confirm-order").style.display = "flex";
+    document.getElementById("main-dish-name").innerHTML = mainDish;  
+    document.getElementById("main-dish-price").innerHTML = (`R$ ${priceMainDish}`);  
+    document.getElementById("drink-name").innerHTML = drink;  
+    document.getElementById("drink-price").innerHTML = (`R$ ${priceDrink}`);  
+    document.getElementById("desert-name").innerHTML = desert;  
+    document.getElementById("desert-price").innerHTML = (`R$ ${priceDesert}`);  
+    document.getElementById("total-price").innerHTML = (`R$ ${total}`);  
 }
 
+function openOrder () {
+     userOrder = encodeURIComponent(
+    `Olá, gostaria de fazer o pedido: \n\n- Prato: ${mainDish} \n- Bebida: ${drink} \n- Sobremesa: ${desert} \nTotal: R$ ${total} \n \nNome: ${userName} \nEndereço: ${address}`
+  );
+
+     window.location.replace(text + userOrder)
+}
+
+function cancel () {
+    document.getElementById("confirm-order").style.display = "none";
+}

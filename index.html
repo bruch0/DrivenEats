@@ -34,8 +34,8 @@
                         <div class="description">
                             2 frangos, arroz, feijão e farofa.
                         </div>
-                        <div class="price" id="price-main-1">
-                            R$ 20,00
+                        <div class="price">
+                            R$ <span id="price-main-1">20,00</span>
                             <ion-icon name="checkmark-circle"></ion-icon>
                         </div>
                     </div>
@@ -50,8 +50,8 @@
                         <div class="description">
                             Acompanha arroz e pirão de peixe.
                         </div>
-                        <div class="price" id="price-main-2">
-                            R$ 25,00
+                        <div class="price">
+                            R$ <span id="price-main-2">25,00</span>
                         </div>
                     </div>
                 </button>
@@ -59,14 +59,14 @@
                 <button type="button" class="dish" id="main-3" onclick="selectMainDish3()">
                     <div class="dish-container">
                         <img src="assets/main-dish-3.jpeg">
-                        <div class="dish-title" id="main-2-title">
+                        <div class="dish-title" id="main-3-title">
                             Almôndegas
                         </div>
                         <div class="description">
                             Acompanha arroz, feijão e salada.
                         </div>
-                        <div class="price" id="price-main-3">
-                            R$ 16,00
+                        <div class="price">
+                            R$ <span id="price-main-3">16,00</span>
                         </div>
                     </div>
                 </button>
@@ -80,8 +80,8 @@
                         <div class="description">
                             Acompanha arroz, feijão e salada.
                         </div>
-                        <div class="price" id="price-main-4">
-                            R$ 21,00
+                        <div class="price">
+                            R$ <span id="price-main-4">21,00</span>
                         </div>
                     </div>
                 </button>
@@ -102,8 +102,8 @@
                         <div class="description">
                             Lata 350 ml
                         </div>
-                        <div class="price" id="price-drink-1">
-                            R$ 6,00
+                        <div class="price">
+                            R$ <span id="price-drink-1">6,00</span>
                         </div>
                     </div>
                 </button>
@@ -117,8 +117,8 @@
                         <div class="description">
                             Garraga 1,5L
                         </div>
-                        <div class="price" id="price-drink-2">
-                            R$ 12,00
+                        <div class="price">
+                            R$ <span id="price-drink-2">12,00</span>
                         </div>
                     </div>
                 </button>
@@ -132,8 +132,8 @@
                         <div class="description">
                             Garraga 500ml
                         </div>
-                        <div class="price" id="price-drink-3">
-                            R$ 5,00
+                        <div class="price">
+                            R$ <span id="price-drink-3">5,00</span>
                         </div>
                     </div>
                 </button>
@@ -147,8 +147,8 @@
                         <div class="description">
                             Lata 350ml
                         </div>
-                        <div class="price" id="price-drink-4">
-                            R$ 4,00
+                        <div class="price">
+                            R$ <span id="price-drink-4">4,00</span>
                         </div>
                     </div>
                 </button>
@@ -169,8 +169,8 @@
                         <div class="description">
                             5 unidades
                         </div>
-                        <div class="price" id="price-desert-1">
-                            R$ 4,00
+                        <div class="price">
+                            R$ <span id="price-desert-1">4,00</span>
                         </div>
                     </div>
                 </button>
@@ -184,8 +184,8 @@
                         <div class="description">
                             5 unidades
                         </div>
-                        <div class="price" id="price-desert-2">
-                            R$ 5,00
+                        <div class="price">
+                            R$ <span id="price-desert-2">5,00</span>
                         </div>
                     </div>
                 </button>
@@ -199,8 +199,8 @@
                         <div class="description">
                             1 unidade
                         </div>
-                        <div class="price" id="price-desert-3">
-                            R$ 4,50
+                        <div class="price">
+                            R$ <span id="price-desert-3">6,00</span>
                         </div>
                     </div>
                 </button>
@@ -214,8 +214,8 @@
                         <div class="description">
                             300g
                         </div>
-                        <div class="price" id="price-desert-4">
-                            R$ 2,50
+                        <div class="price">
+                            R$ <span id="price-desert-4">3,00</span>
                         </div>
                     </div>
                 </button>
@@ -229,5 +229,37 @@
 
     <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
     <script src="script.js"></script>
+
+    <div class="confirm-order" id="confirm-order">
+        <div class="container">
+            <div class="text-container">
+                <div>Confirme seu pedido</div>
+
+                <div class="confirm-main-dish">
+                    <div id="main-dish-name">frango</div>
+                    <div id="main-dish-price">teste</div>
+                </div>
+
+                <div class="confirm-drink">
+                    <div id="drink-name">coca</div>
+                    <div id="drink-price">teste</div>
+                </div>
+
+                <div class="confirm-desert">
+                    <div id="desert-name">pudim</div>
+                    <div id="desert-price">teste</div>
+                </div>
+
+                <div class="total">
+                    <div>TOTAL</div>
+                    <div id="total-price">teste</div>
+                </div>
+
+                <button class="button-confirm" id="confirm" onclick="openOrder()">Tudo certo, pode pedir!</button>
+
+                <button class="button-cancel" id="cancel" onclick="cancel()">cancelar</button>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
