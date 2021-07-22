@@ -220,7 +220,7 @@ function order() {
     document.getElementById("drink-price").innerHTML = (`R$ ${priceDrink}`);  
     document.getElementById("desert-name").innerHTML = desert;  
     document.getElementById("desert-price").innerHTML = (`R$ ${priceDesert}`);  
-    document.getElementById("total-price").innerHTML = (`R$ ${total}`);  
+    document.getElementById("total-price").innerHTML = (`R$ ${total},00`);  
 }
 
 function openOrder () {

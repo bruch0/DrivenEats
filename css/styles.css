@@ -161,7 +161,7 @@ ion-icon {
 }
 
 .container {
-    width: 377px;
+    width: 90vw;
     height: 353px;
     background-color: #50D074;
     margin: auto auto;
@@ -179,18 +179,22 @@ ion-icon {
     margin-top: 25px;
 }
 
+.text-container :first-child {
+    font-size: 5vw;
+}
+
 .confirm-main-dish, .confirm-drink, .confirm-desert, .total {
     display: flex;
     justify-content: space-between;
     font-weight: normal;
+    font-size: 5vw;
     width: 85%;
-
 }
 
 .button-confirm {
     background-color: #FFFFFF;
     border-radius: 100px;   
-    width:329px;
+    width: 80%;
     height: 52px;
     font-size: 22px;
     font-weight: bold;
