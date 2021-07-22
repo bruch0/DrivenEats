@@ -3,15 +3,15 @@ let select2 = false
 let select3 = false
 let userName = ''
 let address = ''
-mainDish = ''
-drink = ''
-desert = ''
-priceMainDish = 0
-priceDrink = 0
-priceDesert = 0
-total = 0
-userOrder = ''
-text = 'https://wa.me/5548984321748?text='
+let mainDish = ''
+let drink = ''
+let desert = ''
+let priceMainDish = 0
+let priceDrink = 0
+let priceDesert = 0
+let total = 0
+let userOrder = ''
+let text = 'https://wa.me/5548984321748?text='
 
 
 function check() {
@@ -207,7 +207,7 @@ function selectDesert4 () {
     check()
 }
 
-// Order function
+// Order functions
 
 function order() {
     userName = prompt("Insira seu nome")
@@ -230,6 +230,8 @@ function openOrder () {
 
      window.location.replace(text + userOrder)
 }
+
+// Cancel function
 
 function cancel () {
     document.getElementById("confirm-order").style.display = "none";
