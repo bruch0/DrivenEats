@@ -25,7 +25,7 @@
                 Primeiro, o seu prato
             </div>
             <div class="options">
-                <button type="button" class="dish" id="main-1" onclick="selectMainDish1()">
+                <button type="button" class="dish" id="main-1" onclick="selectDish('main', 1)">
                     <div class="dish-container">
                         <img src="assets/main-dish-1.jpeg">
                         <div class="dish-title" id="main-1-title">
@@ -36,12 +36,12 @@
                         </div>
                         <div class="price">
                             <div>R$ <span id="price-main-1">20,00</span></div>
-                            <ion-icon name="checkmark-circle" id="check-main-1"></ion-icon>
+                            <ion-icon name="checkmark-circle"/ion-icon>
                         </div>
                     </div>
                 </button>
 
-                <button type="button" class="dish" id="main-2" onclick="selectMainDish2()">
+                <button type="button" class="dish" id="main-2" onclick="selectDish('main', 2)">
                     <div class="dish-container">
                         <img src="assets/main-dish-2.jpeg">
                         <div class="dish-title" id="main-2-title">
@@ -52,12 +52,12 @@
                         </div>
                         <div class="price">
                             <div>R$ <span id="price-main-2">25,00</span></div>
-                            <ion-icon name="checkmark-circle" id="check-main-2"></ion-icon>
+                            <ion-icon name="checkmark-circle"/ion-icon>
                         </div>
                     </div>
                 </button>
 
-                <button type="button" class="dish" id="main-3" onclick="selectMainDish3()">
+                <button type="button" class="dish" id="main-3" onclick="selectDish('main', 3)">
                     <div class="dish-container">
                         <img src="assets/main-dish-3.jpeg">
                         <div class="dish-title" id="main-3-title">
@@ -68,12 +68,12 @@
                         </div>
                         <div class="price">
                             <div>R$ <span id="price-main-3">16,00</span></div>
-                            <ion-icon name="checkmark-circle" id="check-main-3"></ion-icon>
+                            <ion-icon name="checkmark-circle"/ion-icon>
                         </div>
                     </div>
                 </button>
 
-                <button type="button" class="dish" id="main-4" onclick="selectMainDish4()">
+                <button type="button" class="dish" id="main-4" onclick="selectDish('main', 4)">
                     <div class="dish-container">
                         <img src="assets/main-dish-4.jpeg">
                         <div class="dish-title" id="main-4-title">
@@ -84,7 +84,7 @@
                         </div>
                         <div class="price">
                             <div>R$ <span id="price-main-4">21,00</span></div>
-                            <ion-icon name="checkmark-circle" id="check-main-4"></ion-icon>
+                            <ion-icon name="checkmark-circle"/ion-icon>
                         </div>
                     </div>
                 </button>
@@ -96,7 +96,7 @@
                 Agora, sua bebida
             </div>
             <div class="options">
-                <button type="button" class="dish" id="drink-1" onclick="selectDrink1()">
+                <button type="button" class="dish" id="drink-1" onclick="selectDish('drink', 1)">
                     <div class="dish-container">
                         <img src="assets/drink-1.png">
                         <div class="dish-title" id="drink-1-title">
@@ -107,12 +107,12 @@
                         </div>
                         <div class="price">
                             <div>R$ <span id="price-drink-1">6,00</span></div>
-                            <ion-icon name="checkmark-circle" id="check-drink-1"></ion-icon>
+                            <ion-icon name="checkmark-circle"</ion-icon>
                         </div>
                     </div>
                 </button>
 
-                <button type="button" class="dish" id="drink-2" onclick="selectDrink2()">
+                <button type="button" class="dish" id="drink-2" onclick="selectDish('drink', 2)">
                     <div class="dish-container">
                         <img src="assets/drink-2.png">
                         <div class="dish-title" id="drink-2-title">
@@ -123,12 +123,12 @@
                         </div>
                         <div class="price">
                             <div>R$ <span id="price-drink-2">12,00</span></div>
-                            <ion-icon name="checkmark-circle" id="check-drink-2"></ion-icon>
+                            <ion-icon name="checkmark-circle"</ion-icon>
                         </div>
                     </div>
                 </button>
 
-                <button type="button" class="dish" id="drink-3" onclick="selectDrink3()">
+                <button type="button" class="dish" id="drink-3" onclick="selectDish('drink', 3)">
                     <div class="dish-container">
                         <img src="assets/drink-3.png">
                         <div class="dish-title" id="drink-3-title">
@@ -139,12 +139,12 @@
                         </div>
                         <div class="price">
                             <div>R$ <span id="price-drink-3">5,00</span></div>
-                            <ion-icon name="checkmark-circle" id="check-drink-3"></ion-icon>
+                            <ion-icon name="checkmark-circle"</ion-icon>
                         </div>
                     </div>
                 </button>
 
-                <button type="button" class="dish" id="drink-4" onclick="selectDrink4()">
+                <button type="button" class="dish" id="drink-4" onclick="selectDish('drink', 4)">
                     <div class="dish-container">
                         <img src="assets/drink-4.png">
                         <div class="dish-title" id="drink-4-title">
@@ -155,7 +155,7 @@
                         </div>
                         <div class="price">
                             <div>R$ <span id="price-drink-4">4,00</span></div>
-                            <ion-icon name="checkmark-circle" id="check-drink-4"></ion-icon>
+                            <ion-icon name="checkmark-circle"</ion-icon>
                         </div>
                     </div>
                 </button>
@@ -167,7 +167,7 @@
                 Por fim, sua sobremesa
             </div>
             <div class="options">
-                <button type="button" class="dish" id="desert-1" onclick="selectDesert1()">
+                <button type="button" class="dish" id="desert-1" onclick="selectDish('desert', 1)">
                     <div class="dish-container">
                         <img src="assets/desert-1.png">
                         <div class="dish-title" id="desert-1-title">
@@ -178,12 +178,12 @@
                         </div>
                         <div class="price">
                             <div>R$ <span id="price-desert-1">4,00</span></div>
-                            <ion-icon name="checkmark-circle" id="check-desert-1"></ion-icon>
+                            <ion-icon name="checkmark-circle"></ion-icon>
                         </div>
                     </div>
                 </button>
 
-                <button type="button" class="dish" id="desert-2" onclick="selectDesert2()">
+                <button type="button" class="dish" id="desert-2" onclick="selectDish('desert', 2)">
                     <div class="dish-container">
                         <img src="assets/desert-2.png">
                         <div class="dish-title" id="desert-2-title">
@@ -194,12 +194,12 @@
                         </div>
                         <div class="price">
                             <div>R$ <span id="price-desert-2">5,00</span></div>
-                            <ion-icon name="checkmark-circle" id="check-desert-2"></ion-icon>
+                            <ion-icon name="checkmark-circle"></ion-icon>
                         </div>
                     </div>
                 </button>
 
-                <button type="button" class="dish" id="desert-3" onclick="selectDesert3()">
+                <button type="button" class="dish" id="desert-3" onclick="selectDish('desert', 3)">
                     <div class="dish-container">
                         <img src="assets/desert-3.png">
                         <div class="dish-title" id="desert-3-title">
@@ -210,12 +210,12 @@
                         </div>
                         <div class="price">
                             <div>R$ <span id="price-desert-3">6,00</span></div>
-                            <ion-icon name="checkmark-circle" id="check-desert-3"></ion-icon>
+                            <ion-icon name="checkmark-circle"></ion-icon>
                         </div>
                     </div>
                 </button>
 
-                <button type="button" class="dish" id="desert-4" onclick="selectDesert4()">
+                <button type="button" class="dish" id="desert-4" onclick="selectDish('desert', 4)">
                     <div class="dish-container">
                         <img src="assets/desert-4.jpeg">
                         <div class="dish-title" id="desert-4-title">
@@ -226,7 +226,7 @@
                         </div>
                         <div class="price">
                             <div>R$ <span id="price-desert-4">3,00</span></div>
-                            <ion-icon name="checkmark-circle" id="check-desert-4"></ion-icon>
+                            <ion-icon name="checkmark-circle"></ion-icon>
                         </div>
                     </div>
                 </button>

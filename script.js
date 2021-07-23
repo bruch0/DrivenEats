@@ -12,7 +12,7 @@ let priceDesert = 0
 let total = 0
 let userOrder = ''
 let text = 'https://wa.me/5548984321748?text='
-
+let previous = ''
 
 function check() {
     if (select1 == true && select2 == true && select3 == true) {
@@ -21,190 +21,67 @@ function check() {
     }
 }
 
-// Select main dish function
+// Select dishes function
 
-function selectMainDish1 () {
-    document.getElementById("main-1").style.borderColor = "#32B72F";
-    document.getElementById("main-2").style.borderColor = "transparent";
-    document.getElementById("main-3").style.borderColor = "transparent";
-    document.getElementById("main-4").style.borderColor = "transparent";
-    document.getElementById("check-main-1").style.display = "initial";
-    document.getElementById("check-main-2").style.display = "none";
-    document.getElementById("check-main-3").style.display = "none";
-    document.getElementById("check-main-4").style.display = "none";
-    mainDish = document.getElementById("main-1-title").innerText;
-    priceMainDish = document.getElementById("price-main-1").innerText;
-    select1 = true;
-    check()
-}
+function selectDish(dish, number) {
+    if (dish === 'main') {
+        if (select1 === false) {
+            aux = 'main-' + number;
+            previous = document.getElementById(aux);
+            document.getElementById(aux).classList.toggle('select');
+            select1 = true;
+        }
 
-function selectMainDish2 () {
-    document.getElementById("main-1").style.borderColor = "transparent";
-    document.getElementById("main-2").style.borderColor = "#32B72F";
-    document.getElementById("main-3").style.borderColor = "transparent";
-    document.getElementById("main-4").style.borderColor = "transparent";
-    document.getElementById("check-main-1").style.display = "none";
-    document.getElementById("check-main-2").style.display = "initial";
-    document.getElementById("check-main-3").style.display = "none";
-    document.getElementById("check-main-4").style.display = "none";
-    mainDish = document.getElementById("main-2-title").innerText;
-    priceMainDish = document.getElementById("price-main-2").innerText;
-    select1 = true;
-    check()
-}
+        if (select1 === true) {
+            previous.classList.toggle('select');
+            aux = 'main-' + number;
+            previous = document.getElementById(aux);
+            document.getElementById(aux).classList.toggle('select');
+        }
 
-function selectMainDish3 () {
-    document.getElementById("main-1").style.borderColor = "transparent";
-    document.getElementById("main-2").style.borderColor = "transparent";
-    document.getElementById("main-3").style.borderColor = "#32B72F";
-    document.getElementById("main-4").style.borderColor = "transparent";
-    document.getElementById("check-main-1").style.display = "none";
-    document.getElementById("check-main-2").style.display = "none";
-    document.getElementById("check-main-3").style.display = "initial";
-    document.getElementById("check-main-4").style.display = "none";
-    mainDish = document.getElementById("main-3-title").innerText;
-    priceMainDish = document.getElementById("price-main-3").innerText;
-    select1 = true;
-    check()
-}
+        mainDish = document.getElementById("main-1-title").innerText;
+        priceMainDish = document.getElementById("price-main-1").innerText;
+    }
 
-function selectMainDish4 () {
-    document.getElementById("main-1").style.borderColor = "transparent";
-    document.getElementById("main-2").style.borderColor = "transparent";
-    document.getElementById("main-3").style.borderColor = "transparent";
-    document.getElementById("main-4").style.borderColor = "#32B72F";
-    document.getElementById("check-main-1").style.display = "none";
-    document.getElementById("check-main-2").style.display = "none";
-    document.getElementById("check-main-3").style.display = "none";
-    document.getElementById("check-main-4").style.display = "initial";
-    mainDish = document.getElementById("main-4-title").innerText;
-    priceMainDish = document.getElementById("price-main-4").innerText;
-    select1 = true;
-    check()
-}
+    else if (dish === 'drink') {
+        if (select2 === false) {
+            aux = 'drink-' + number;
+            previous = document.getElementById(aux);
+            document.getElementById(aux).classList.toggle('select');
+            select2 = true;
+        }
 
-// Select drink functions
+        if (select2 === true) {
+            previous.classList.toggle('select');
+            aux = 'drink-' + number;
+            previous = document.getElementById(aux);
+            document.getElementById(aux).classList.toggle('select');
+        }
 
-function selectDrink1 () {
-    document.getElementById("drink-1").style.borderColor = "#32B72F";
-    document.getElementById("drink-2").style.borderColor = "transparent";
-    document.getElementById("drink-3").style.borderColor = "transparent";
-    document.getElementById("drink-4").style.borderColor = "transparent";
-    document.getElementById("check-drink-1").style.display = "initial";
-    document.getElementById("check-drink-2").style.display = "none";
-    document.getElementById("check-drink-3").style.display = "none";
-    document.getElementById("check-drink-4").style.display = "none";
-    drink = document.getElementById("drink-1-title").innerText;
-    priceDrink = document.getElementById("price-drink-1").innerText;
-    select2 = true;
-    check()
-}
+        drink = document.getElementById("drink-1-title").innerText;
+        priceDrink = document.getElementById("price-drink-1").innerText;
+        check()
+    }
 
-function selectDrink2 () {
-    document.getElementById("drink-1").style.borderColor = "transparent";
-    document.getElementById("drink-2").style.borderColor = "#32B72F";
-    document.getElementById("drink-3").style.borderColor = "transparent";
-    document.getElementById("drink-4").style.borderColor = "transparent";
-    document.getElementById("check-drink-1").style.display = "none";
-    document.getElementById("check-drink-2").style.display = "initial";
-    document.getElementById("check-drink-3").style.display = "none";
-    document.getElementById("check-drink-4").style.display = "none";
-    drink = document.getElementById("drink-2-title").innerText;
-    priceDrink = document.getElementById("price-drink-2").innerText;
-    select2 = true;
-    check()
-}
+    else if(dish === 'desert') {
+        if (select3 === false) {
+            aux = 'desert-' + number;
+            previous = document.getElementById(aux);
+            document.getElementById(aux).classList.toggle('select');
+            select3 = true;
+        }
 
-function selectDrink3 () {
-    document.getElementById("drink-1").style.borderColor = "transparent";
-    document.getElementById("drink-2").style.borderColor = "transparent";
-    document.getElementById("drink-3").style.borderColor = "#32B72F";
-    document.getElementById("drink-4").style.borderColor = "transparent";
-    document.getElementById("check-drink-1").style.display = "none";
-    document.getElementById("check-drink-2").style.display = "none";
-    document.getElementById("check-drink-3").style.display = "initial";
-    document.getElementById("check-drink-4").style.display = "none";
-    drink = document.getElementById("drink-3-title").innerText;
-    priceDrink = document.getElementById("price-drink-3").innerText;
-    select2 = true;
-    check()
-}
+        if (select3 === true) {
+            previous.classList.toggle('select');
+            aux = 'desert-' + number;
+            previous = document.getElementById(aux);
+            document.getElementById(aux).classList.toggle('select');
+        }
 
-function selectDrink4 () {
-    document.getElementById("drink-1").style.borderColor = "transparent";
-    document.getElementById("drink-2").style.borderColor = "transparent";
-    document.getElementById("drink-3").style.borderColor = "transparent";
-    document.getElementById("drink-4").style.borderColor = "#32B72F";
-    document.getElementById("check-drink-1").style.display = "none";
-    document.getElementById("check-drink-2").style.display = "none";
-    document.getElementById("check-drink-3").style.display = "none";
-    document.getElementById("check-drink-4").style.display = "initial";
-    drink = document.getElementById("drink-4-title").innerText;
-    priceDrink = document.getElementById("price-drink-4").innerText;
-    select2 = true;
-    check()
-}
-
-// Select desert functions
-
-function selectDesert1 () {
-    document.getElementById("desert-1").style.borderColor = "#32B72F";
-    document.getElementById("desert-2").style.borderColor = "transparent";
-    document.getElementById("desert-3").style.borderColor = "transparent";
-    document.getElementById("desert-4").style.borderColor = "transparent";
-    document.getElementById("check-desert-1").style.display = "initial";
-    document.getElementById("check-desert-2").style.display = "none";
-    document.getElementById("check-desert-3").style.display = "none";
-    document.getElementById("check-desert-4").style.display = "none";
-    desert = document.getElementById("desert-1-title").innerText;
-    priceDesert = document.getElementById("price-desert-1").innerText;
-    select3 = true;
-    check()
-}
-
-function selectDesert2 () {
-    document.getElementById("desert-1").style.borderColor = "transparent";
-    document.getElementById("desert-2").style.borderColor = "#32B72F";
-    document.getElementById("desert-3").style.borderColor = "transparent";
-    document.getElementById("desert-4").style.borderColor = "transparent";
-    document.getElementById("check-desert-1").style.display = "none";
-    document.getElementById("check-desert-2").style.display = "initial";
-    document.getElementById("check-desert-3").style.display = "none";
-    document.getElementById("check-desert-4").style.display = "none";
-    desert = document.getElementById("desert-2-title").innerText;
-    priceDesert = document.getElementById("price-desert-2").innerText;
-    select3 = true;
-    check()
-}
-
-function selectDesert3 () {
-    document.getElementById("desert-1").style.borderColor = "transparent";
-    document.getElementById("desert-2").style.borderColor = "transparent";
-    document.getElementById("desert-3").style.borderColor = "#32B72F";
-    document.getElementById("desert-4").style.borderColor = "transparent";
-    document.getElementById("check-desert-1").style.display = "none";
-    document.getElementById("check-desert-2").style.display = "none";
-    document.getElementById("check-desert-3").style.display = "initial";
-    document.getElementById("check-desert-4").style.display = "none";
-    desert = document.getElementById("desert-3-title").innerText;
-    priceDesert = document.getElementById("price-desert-3").innerText;
-    select3 = true;
-    check()
-}
-
-function selectDesert4 () {
-    document.getElementById("desert-1").style.borderColor = "transparent";
-    document.getElementById("desert-2").style.borderColor = "transparent";
-    document.getElementById("desert-3").style.borderColor = "transparent";
-    document.getElementById("desert-4").style.borderColor = "#32B72F";
-    document.getElementById("check-desert-1").style.display = "none";
-    document.getElementById("check-desert-2").style.display = "none";
-    document.getElementById("check-desert-3").style.display = "none";
-    document.getElementById("check-desert-4").style.display = "initial";
-    desert = document.getElementById("desert-4-title").innerText;
-    priceDesert = document.getElementById("price-desert-4").innerText;
-    select3 = true;
-    check()
+        desert = document.getElementById("desert-1-title").innerText;
+        priceDesert = document.getElementById("price-desert-1").innerText;
+        check()
+    }
 }
 
 // Order functions
