@@ -1,3 +1,4 @@
+// Declaração de variáveis
 let select1 = false
 let select2 = false
 let select3 = false
