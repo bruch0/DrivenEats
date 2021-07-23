@@ -12,7 +12,9 @@ let priceDesert = 0
 let total = 0
 let userOrder = ''
 let text = 'https://wa.me/5548984321748?text='
-let previous = ''
+let previous_main = ''
+let previous_drink = ''
+let previous_desert = ''
 
 function check() {
     if (select1 == true && select2 == true && select3 == true) {
@@ -27,15 +29,15 @@ function selectDish(dish, number) {
     if (dish === 'main') {
         if (select1 === false) {
             aux = 'main-' + number;
-            previous = document.getElementById(aux);
+            previous_main = document.getElementById(aux);
             document.getElementById(aux).classList.toggle('select');
             select1 = true;
         }
 
         if (select1 === true) {
-            previous.classList.toggle('select');
+            previous_main.classList.toggle('select');
             aux = 'main-' + number;
-            previous = document.getElementById(aux);
+            previous_main = document.getElementById(aux);
             document.getElementById(aux).classList.toggle('select');
         }
 
@@ -46,15 +48,15 @@ function selectDish(dish, number) {
     else if (dish === 'drink') {
         if (select2 === false) {
             aux = 'drink-' + number;
-            previous = document.getElementById(aux);
+            previous_drink = document.getElementById(aux);
             document.getElementById(aux).classList.toggle('select');
             select2 = true;
         }
 
         if (select2 === true) {
-            previous.classList.toggle('select');
+            previous_drink.classList.toggle('select');
             aux = 'drink-' + number;
-            previous = document.getElementById(aux);
+            previous_drink = document.getElementById(aux);
             document.getElementById(aux).classList.toggle('select');
         }
 
@@ -66,15 +68,15 @@ function selectDish(dish, number) {
     else if(dish === 'desert') {
         if (select3 === false) {
             aux = 'desert-' + number;
-            previous = document.getElementById(aux);
+            previous_desert = document.getElementById(aux);
             document.getElementById(aux).classList.toggle('select');
             select3 = true;
         }
 
         if (select3 === true) {
-            previous.classList.toggle('select');
+            previous_desert.classList.toggle('select');
             aux = 'desert-' + number;
-            previous = document.getElementById(aux);
+            previous_desert = document.getElementById(aux);
             document.getElementById(aux).classList.toggle('select');
         }
 
@@ -91,12 +93,16 @@ function order() {
     address = prompt("Insira seu endereço")
     total = parseInt(priceMainDish) + parseInt(priceDrink) + parseInt(priceDesert)
     document.getElementById("confirm-order").style.display = "flex";
+
     document.getElementById("main-dish-name").innerHTML = mainDish;  
     document.getElementById("main-dish-price").innerHTML = (`R$ ${priceMainDish}`);  
+
     document.getElementById("drink-name").innerHTML = drink;  
     document.getElementById("drink-price").innerHTML = (`R$ ${priceDrink}`);  
+
     document.getElementById("desert-name").innerHTML = desert;  
     document.getElementById("desert-price").innerHTML = (`R$ ${priceDesert}`);  
+    
     document.getElementById("total-price").innerHTML = (`R$ ${total},00`);  
 }
 
