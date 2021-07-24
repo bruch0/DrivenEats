@@ -1,122 +1,98 @@
-// Declaração de variáveis
-let select1 = false
-let select2 = false
-let select3 = false
-let userName = ''
-let address = ''
-let mainDish = ''
-let drink = ''
-let desert = ''
-let priceMainDish = 0
-let priceDrink = 0
-let priceDesert = 0
-let total = 0
-let userOrder = ''
+let userName;
+let address;
+let mainDish;
+let drink;
+let desert;
+let priceMainDish;
+let priceDrink;
+let priceDesert;
+let total;
+let enable;
+let userOrder;
 let text = 'https://wa.me/5548984321748?text='
-let previous_main = ''
-let previous_drink = ''
-let previous_desert = ''
 
 function check() {
-    if (select1 == true && select2 == true && select3 == true) {
-        document.getElementById("order-button").style.backgroundColor = "#32B72F";
-        document.getElementById("order-button").textContent = "Fechar pedido";
+    if (mainDish !== undefined && drink !== undefined && desert !== undefined) {
+        document.querySelector(".order-button").style.backgroundColor = "#32B72F";
+        document.querySelector(".order-button").innerHTML = "Fechar pedido";
+        enable = true;
     }
 }
 
-// Select dishes function
 
-function selectDish(dish, number) {
-    if (dish === 'main') {
-        if (select1 === false) {
-            aux = 'main-' + number;
-            previous_main = document.getElementById(aux);
-            document.getElementById(aux).classList.toggle('select');
-            select1 = true;
-        }
+// Select dishes functions
 
-        if (select1 === true) {
-            previous_main.classList.toggle('select');
-            aux = 'main-' + number;
-            previous_main = document.getElementById(aux);
-            document.getElementById(aux).classList.toggle('select');
-        }
+function selectMainDish(dish) {
+    let selected = document.querySelector('.main.select');
 
-        mainDish = document.getElementById("main-1-title").innerText;
-        priceMainDish = document.getElementById("price-main-1").innerText;
+    if (selected !== null) {
+        selected.classList.remove('select');
     }
 
-    else if (dish === 'drink') {
-        if (select2 === false) {
-            aux = 'drink-' + number;
-            previous_drink = document.getElementById(aux);
-            document.getElementById(aux).classList.toggle('select');
-            select2 = true;
-        }
+    dish.classList.add('select');
+    mainDish = document.querySelector(".main.select .dish-title").innerText;
+    priceMainDish = document.querySelector(".main.select span").innerText;
+    check()
+}
 
-        if (select2 === true) {
-            previous_drink.classList.toggle('select');
-            aux = 'drink-' + number;
-            previous_drink = document.getElementById(aux);
-            document.getElementById(aux).classList.toggle('select');
-        }
+function selectDrink(dish) {
+    let selected = document.querySelector('.drink.select');
 
-        drink = document.getElementById("drink-1-title").innerText;
-        priceDrink = document.getElementById("price-drink-1").innerText;
-        check()
+    if (selected !== null) {
+        selected.classList.remove('select');
     }
 
-    else if(dish === 'desert') {
-        if (select3 === false) {
-            aux = 'desert-' + number;
-            previous_desert = document.getElementById(aux);
-            document.getElementById(aux).classList.toggle('select');
-            select3 = true;
-        }
+    dish.classList.add('select');
+    drink = document.querySelector(".drink.select .dish-title").innerText;
+    priceDrink = document.querySelector(".drink.select span").innerText;
+    check()
+}
 
-        if (select3 === true) {
-            previous_desert.classList.toggle('select');
-            aux = 'desert-' + number;
-            previous_desert = document.getElementById(aux);
-            document.getElementById(aux).classList.toggle('select');
-        }
+function selectDesert(dish) {
+    let selected = document.querySelector('.desert.select');
 
-        desert = document.getElementById("desert-1-title").innerText;
-        priceDesert = document.getElementById("price-desert-1").innerText;
-        check()
+    if (selected !== null) {
+        selected.classList.remove('select');
     }
+
+    dish.classList.add('select');
+    desert = document.querySelector(".desert.select .dish-title").innerText;
+    priceDesert = document.querySelector(".desert.select span").innerText;
+    check()
 }
 
 // Order functions
 
 function order() {
-    userName = prompt("Insira seu nome")
-    address = prompt("Insira seu endereço")
-    total = parseInt(priceMainDish) + parseInt(priceDrink) + parseInt(priceDesert)
-    document.getElementById("confirm-order").style.display = "flex";
+    if (enable === true) {
+        userName = prompt("Insira seu nome")
+        address = prompt("Insira seu endereço")
+        total = parseInt(priceMainDish) + parseInt(priceDrink) + parseInt(priceDesert)
+        document.querySelector(".confirm-order").style.display = "flex";
 
-    document.getElementById("main-dish-name").innerHTML = mainDish;  
-    document.getElementById("main-dish-price").innerHTML = (`R$ ${priceMainDish}`);  
+        document.querySelector(".main-dish-name").innerHTML = mainDish;  
+        document.querySelector(".main-dish-price").innerHTML = (`R$ ${priceMainDish}`);  
 
-    document.getElementById("drink-name").innerHTML = drink;  
-    document.getElementById("drink-price").innerHTML = (`R$ ${priceDrink}`);  
+        document.querySelector(".drink-name").innerHTML = drink;  
+        document.querySelector(".drink-price").innerHTML = (`R$ ${priceDrink}`);  
 
-    document.getElementById("desert-name").innerHTML = desert;  
-    document.getElementById("desert-price").innerHTML = (`R$ ${priceDesert}`);  
-    
-    document.getElementById("total-price").innerHTML = (`R$ ${total},00`);  
+        document.querySelector(".desert-name").innerHTML = desert;  
+        document.querySelector(".desert-price").innerHTML = (`R$ ${priceDesert}`);  
+        
+        document.querySelector(".total-price").innerHTML = (`R$ ${total},00`);  
+    }
 }
 
 function openOrder () {
-     userOrder = encodeURIComponent(
+    userOrder = encodeURIComponent(
     `Olá, gostaria de fazer o pedido: \n\n- Prato: ${mainDish} \n- Bebida: ${drink} \n- Sobremesa: ${desert} \nTotal: R$ ${total} \n \nNome: ${userName} \nEndereço: ${address}`
-  );
+    );
 
-     window.location.replace(text + userOrder)
+    window.location.replace(text + userOrder)
 }
 
 // Cancel function
 
 function cancel () {
-    document.getElementById("confirm-order").style.display = "none";
+    document.querySelector(".confirm-order").style.display = "none";
 }
