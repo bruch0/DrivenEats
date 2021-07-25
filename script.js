@@ -31,7 +31,7 @@ function selectMainDish(dish) {
 
     dish.classList.add('select');
     mainDish = document.querySelector(".main.select .dish-title").innerText;
-    priceMainDish = document.querySelector(".main.select span").innerText;
+    priceMainDish = document.querySelector(".main.select span").innerText.replace(',', '.');
     check()
 }
 
@@ -44,7 +44,7 @@ function selectDrink(dish) {
 
     dish.classList.add('select');
     drink = document.querySelector(".drink.select .dish-title").innerText;
-    priceDrink = document.querySelector(".drink.select span").innerText;
+    priceDrink = document.querySelector(".drink.select span").innerText.replace(',', '.');
     check()
 }
 
@@ -57,7 +57,7 @@ function selectDesert(dish) {
 
     dish.classList.add('select');
     desert = document.querySelector(".desert.select .dish-title").innerText;
-    priceDesert = document.querySelector(".desert.select span").innerText;
+    priceDesert = document.querySelector(".desert.select span").innerText.replace(',', '.');
     check()
 }
 
@@ -67,25 +67,25 @@ function order() {
     if (enable === true) {
         userName = prompt("Insira seu nome")
         address = prompt("Insira seu endereço")
-        total = parseInt(priceMainDish) + parseInt(priceDrink) + parseInt(priceDesert)
+        total = (parseFloat(priceMainDish) + parseFloat(priceDrink) + parseFloat(priceDesert)).toFixed(2);
         document.querySelector(".confirm-order").style.display = "flex";
 
         document.querySelector(".main-dish-name").innerHTML = mainDish;  
-        document.querySelector(".main-dish-price").innerHTML = (`R$ ${priceMainDish}`);  
+        document.querySelector(".main-dish-price").innerHTML = (`R$ ${priceMainDish.replace('.', ',')}`);  
 
         document.querySelector(".drink-name").innerHTML = drink;  
-        document.querySelector(".drink-price").innerHTML = (`R$ ${priceDrink}`);  
+        document.querySelector(".drink-price").innerHTML = (`R$ ${priceDrink.replace('.', ',')}`);  
 
         document.querySelector(".desert-name").innerHTML = desert;  
-        document.querySelector(".desert-price").innerHTML = (`R$ ${priceDesert}`);  
+        document.querySelector(".desert-price").innerHTML = (`R$ ${priceDesert.replace('.', ',')}`);  
         
-        document.querySelector(".total-price").innerHTML = (`R$ ${total},00`);  
+        document.querySelector(".total-price").innerHTML = (`R$ ${total.replace('.', ',')}`);  
     }
 }
 
 function openOrder () {
     userOrder = encodeURIComponent(
-    `Olá, gostaria de fazer o pedido: \n\n- Prato: ${mainDish} \n- Bebida: ${drink} \n- Sobremesa: ${desert} \nTotal: R$ ${total} \n \nNome: ${userName} \nEndereço: ${address}`
+    `Olá, gostaria de fazer o pedido: \n\n- Prato: ${mainDish} \n- Bebida: ${drink} \n- Sobremesa: ${desert} \nTotal: R$ ${total.replace('.', ',')} \n \nNome: ${userName} \nEndereço: ${address}`
     );
 
     window.location.replace(text + userOrder)
