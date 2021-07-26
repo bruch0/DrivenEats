@@ -18,7 +18,7 @@
             Sua comida em 6 minutos
         </p>
     </div>
-
+    
     <div class="dishes">
         <div class="main-dish">
             <div class="food-title">
@@ -27,7 +27,7 @@
             <div class="options">
                 <button type="button" class="dish main" onclick="selectMainDish(this)">
                     <div class="dish-container">
-                        <img src="assets/main-dish-1.jpeg">
+                        <img src="assets/main-dish-1.jpeg" alt="Frango à milanesa">
                         <div class="dish-title">
                             Frango à milanesa
                         </div>
@@ -40,10 +40,9 @@
                         </div>
                     </div>
                 </button>
-
                 <button type="button" class="dish main" onclick="selectMainDish(this)">
                     <div class="dish-container">
-                        <img src="assets/main-dish-2.jpeg">
+                        <img src="assets/main-dish-2.jpeg" alt="Peixe frito">
                         <div class="dish-title">
                             Peixe frito
                         </div>
@@ -56,10 +55,9 @@
                         </div>
                     </div>
                 </button>
-
                 <button type="button" class="dish main" onclick="selectMainDish(this)">
                     <div class="dish-container">
-                        <img src="assets/main-dish-3.jpeg">
+                        <img src="assets/main-dish-3.jpeg" alt="Almôndegas">
                         <div class="dish-title">
                             Almôndegas
                         </div>
@@ -72,10 +70,9 @@
                         </div>
                     </div>
                 </button>
-
                 <button type="button" class="dish main" onclick="selectMainDish(this)">
                     <div class="dish-container">
-                        <img src="assets/main-dish-4.jpeg">
+                        <img src="assets/main-dish-4.jpeg" alt="Panqueca de carne">
                         <div class="dish-title">
                             Panqueca de carne
                         </div>
@@ -90,7 +87,6 @@
                 </button>
             </div>
         </div>
-
         <div class="drink">
             <div class="food-title">
                 Agora, sua bebida
@@ -98,7 +94,7 @@
             <div class="options">
                 <button type="button" class="dish drink" onclick="selectDrink(this)">
                     <div class="dish-container">
-                        <img src="assets/drink-1.png">
+                        <img src="assets/drink-1.png" alt="Coca lata">
                         <div class="dish-title">
                             Coca lata
                         </div>
@@ -111,10 +107,9 @@
                         </div>
                     </div>
                 </button>
-
                 <button type="button" class="dish drink" onclick="selectDrink(this)">
                     <div class="dish-container">
-                        <img src="assets/drink-2.png">
+                        <img src="assets/drink-2.png" alt="Coca garrafa">
                         <div class="dish-title">
                             Coca garrafa
                         </div>
@@ -127,10 +122,9 @@
                         </div>
                     </div>
                 </button>
-
                 <button type="button" class="dish drink" onclick="selectDrink(this)">
                     <div class="dish-container">
-                        <img src="assets/drink-3.png">
+                        <img src="assets/drink-3.png" alt="Água">
                         <div class="dish-title">
                             Água
                         </div>
@@ -143,10 +137,9 @@
                         </div>
                     </div>
                 </button>
-
                 <button type="button" class="dish drink" onclick="selectDrink(this)">
                     <div class="dish-container">
-                        <img src="assets/drink-4.png">
+                        <img src="assets/drink-4.png" alt="Pureza lata">
                         <div class="dish-title">
                             Pureza lata
                         </div>
@@ -161,7 +154,6 @@
                 </button>
             </div>
         </div>
-
         <div class="desert">
             <div class="food-title">
                 Por fim, sua sobremesa
@@ -169,7 +161,7 @@
             <div class="options">
                 <button type="button" class="dish desert" onclick="selectDesert(this)">
                     <div class="dish-container">
-                        <img src="assets/desert-1.png">
+                        <img src="assets/desert-1.png" alt="Pão de mel">
                         <div class="dish-title">
                             Pão de mel
                         </div>
@@ -182,10 +174,9 @@
                         </div>
                     </div>
                 </button>
-
                 <button type="button" class="dish desert" onclick="selectDesert(this)">
                     <div class="dish-container">
-                        <img src="assets/desert-2.png">
+                        <img src="assets/desert-2.png" alt="Cookies">
                         <div class="dish-title">
                             Cookies
                         </div>
@@ -198,10 +189,9 @@
                         </div>
                     </div>
                 </button>
-
                 <button type="button" class="dish desert" onclick="selectDesert(this)">
                     <div class="dish-container">
-                        <img src="assets/desert-3.png">
+                        <img src="assets/desert-3.png" alt="Alfajor">
                         <div class="dish-title">
                             Alfajor
                         </div>
@@ -214,10 +204,9 @@
                         </div>
                     </div>
                 </button>
-
                 <button type="button" class="dish desert" onclick="selectDesert(this)">
                     <div class="dish-container">
-                        <img src="assets/desert-4.jpeg">
+                        <img src="assets/desert-4.jpeg" alt="Bordinhas">
                         <div class="dish-title">
                             Bordinhas
                         </div>
@@ -237,7 +226,6 @@
     <div class="order">
         <button type="button" class="order-button" onclick="order()">Selecione os 3 itens<br>para fechar o pedido</button>
     </div>
-
     <div class="confirm-order">
         <div class="container">
             <div class="text-container">
@@ -247,24 +235,19 @@
                     <div class="main-dish-name"></div>
                     <div class="main-dish-price"></div>
                 </div>
-
                 <div class="confirm-drink">
                     <div class="drink-name"></div>
                     <div class="drink-price"></div>
                 </div>
-
                 <div class="confirm-desert">
                     <div class="desert-name"></div>
                     <div class="desert-price"></div>
                 </div>
-
                 <div class="total">
                     <div>TOTAL</div>
                     <div class="total-price"></div>
                 </div>
-
                 <button class="button-confirm" onclick="openOrder()">Tudo certo, pode pedir!</button>
-
                 <button class="button-cancel" onclick="cancel()">cancelar</button>
             </div>
         </div>
